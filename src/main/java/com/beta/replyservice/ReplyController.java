@@ -15,13 +15,16 @@ public class ReplyController {
     public ReplyController(ReplyService service) {
         this.replyService = service;
     }
-
+    @GetMapping("/")
+    public ReplyMessage rootPath() {
+        return new ReplyMessage("please make request in given format 1- /v2/reply/2-kbzw9ru    2 - /reply");
+    }
     @GetMapping("/reply")
     public ReplyMessage replying() {
         return new ReplyMessage("Message is empty");
     }
 
-    @GetMapping("/reply/{message}")
+    @GetMapping("v2/reply/{message}")
     public ReplyMessage replying(@PathVariable String message) {
         String[] data = message.split(SEPARATOR);
         return replyService.processMessage(data[1], data[0]);
