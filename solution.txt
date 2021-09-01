@@ -1,0 +1,24 @@
+git url- https://github.com/ashutosh9100/replay_service
+hosted on heroku- https://replay-service.herokuapp.com/
+
+API is implemented as Configurable
+can add  more rule in ReplyConfig class
+
+for test make request like below
+ET /v2/reply/11-kbzw9ru
+{
+    "data": "kbzw9ru"
+}
+```
+```
+GET /v2/reply/12-kbzw9ru
+{
+    "data": "5a8973b3b1fafaeaadf10e195c6e1dd4"
+}
+```
+```
+GET /v2/reply/22-kbzw9ru
+{
+    "data": "e8501e64cf0a9fa45e3c25aa9e77ffd5"
+}
+
